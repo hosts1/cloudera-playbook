@@ -1,0 +1,8 @@
+## Note: The default in centos-7 will only install version "5.1.25-3", which is not supported by Hive in CDH6.x. See also:
+## https://bugzilla.redhat.com/show_bug.cgi?id=1684349#c9
+# default package:
+#mysql_connector_package: "mysql-connector-java"
+# latest 5.1.x , from Fedora repo, but tested on centos7:
+mysql_connector_package: "http://download-ib01.fedoraproject.org/pub/fedora/linux/releases/29/Everything/x86_64/os/Packages/m/mysql-connector-java-5.1.38-7.fc29.noarch.rpm"
+#following never version, required Java/JDK-8
+#mysql_connector_package: "http://repo.mysql.com/yum/mysql-connectors-community/el/7/i386//mysql-connector-java-8.0.16-1.el7.noarch.rpm"

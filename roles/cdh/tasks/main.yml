@@ -34,7 +34,7 @@
     - "{{ scm_parcel_repositories }}"
 
 - set_fact:
-    scm_products: "{{ manifests.results | map(attribute='json') | list | json_query('[*].parcels[0].parcelName') | map('regex_replace', '-[a-z0-9]+.parcel$','') | list }}"
+    scm_products: "{{ manifests.results | map(attribute='json') | list | json_query('\"[*].parcels[0].parcelName\"') | map('regex_replace', '-[a-z0-9]+.parcel$','') | list }}"
 
 # https://www.cloudera.com/documentation/enterprise/latest/topics/install_cluster_template.html
 - set_fact:
